@@ -21,6 +21,11 @@ public class ConnectionClass {
     private static final String USER = "root";
     private static final String PASSWORD = "root";
 
+    /**
+     *
+     * return the connection to database
+     * @return
+     */
     public static Connection getConnection() {
         try {
             try {

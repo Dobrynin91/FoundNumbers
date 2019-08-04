@@ -7,7 +7,6 @@ package ru.example.util;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,6 +20,10 @@ public class WritingToDBClass {
 
     private static Logger logger = LoggerFactory.getLogger(WritingToDBClass.class);
 
+    /**
+     *
+     * write Result instance into database
+     */
     public static void insertToDB(int numb) {
         Result result = SearchingClass.getFoundNumbers(numb);
         String sqlQuery = "INSERT INTO found_number (CODE, NUMBER, FILENAMES, ERROR) VALUES (?, ?, ?, ?)";

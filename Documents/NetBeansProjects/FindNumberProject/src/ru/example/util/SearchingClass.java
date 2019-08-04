@@ -9,7 +9,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -29,6 +28,10 @@ public class SearchingClass {
 //    private static final String pathDir = System.getProperty("java.io.tmpdir");
     private static final String pathDir = "C:\\Temp";
 
+    /**
+     *return the Result instance
+     * @return
+     */
     public static Result getFoundNumbers(int numb) {
         List<String> list = new ArrayList();
         Result result = new Result();
@@ -59,6 +62,12 @@ public class SearchingClass {
         }
     }
 
+    /**
+     *
+     * return the array File[] which was found in temporary directory
+     * @return File[]
+     * 
+     */
     private static File[] getFilesArray(String pathDir) {
         return new File(pathDir).listFiles((dir, name) -> name.endsWith(".txt"));
     }
